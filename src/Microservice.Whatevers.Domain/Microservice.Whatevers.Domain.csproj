@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\Builders" />
     <Folder Include="Entities" />
   </ItemGroup>
 
