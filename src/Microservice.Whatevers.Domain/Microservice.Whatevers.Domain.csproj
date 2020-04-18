@@ -8,4 +8,9 @@
     <Compile Remove="Class1.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Abstractions\Builders" />
+    <Folder Include="Entities" />
+  </ItemGroup>
+
 </Project>
