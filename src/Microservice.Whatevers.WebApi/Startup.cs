@@ -1,15 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microservice.Whatevers.Repositories.IoC;
 
 namespace Microservice.Whatevers.WebApi
 {
@@ -26,6 +20,10 @@ namespace Microservice.Whatevers.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            
+            services.AddDbContext(Configuration);
+            
+            services.AddRepository();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,10 +40,7 @@ namespace Microservice.Whatevers.WebApi
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            app.UseEndpoints(endpoints => endpoints.MapControllers() );
         }
     }
 }
