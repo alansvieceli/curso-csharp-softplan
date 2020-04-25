@@ -2,7 +2,7 @@
 using Microservice.Whatevers.Domain.Entities.Whatevers;
 using Microsoft.EntityFrameworkCore;
 
-namespace Microservice.Whatevers.Repositories.Context
+namespace Microservice.Whatevers.Repositories.Contexts
 {
     public class WhateverContext : DbContext
     {
