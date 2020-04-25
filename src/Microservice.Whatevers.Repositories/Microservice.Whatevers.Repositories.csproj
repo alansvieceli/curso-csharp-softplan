@@ -2,13 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Microservice.Whatevers.Repositories</RootNamespace>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Configs" />
-    <Folder Include="Contexts" />
-    <Folder Include="IoC" />
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Microservice.Whatevers.Domain\Microservice.Whatevers.Domain.csproj" />

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microservice.Whatevers.Domain.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
-namespace Microservice.Whatever.Repositories.Abstractions
+namespace Microservice.Whatevers.Repositories.Abstractions
 {
 public abstract class Repository<TEntity, TId> : IRepository<TEntity, TId>
         where TEntity : EntityBase<TId>

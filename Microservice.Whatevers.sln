@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Whatevers.Doma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Whatevers.Services", "src\Microservice.Whatevers.Services\Microservice.Whatevers.Services.csproj", "{F2094EB7-3334-498E-89C1-13D4EC214619}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Whatever.Repositories", "src\Microservice.Whatever.Repositories\Microservice.Whatever.Repositories.csproj", "{F1398C85-2AAC-4327-861D-B7B4D6C0860A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservice.Whatevers.Repositories", "src\Microservice.Whatevers.Repositories\Microservice.Whatevers.Repositories.csproj", "{F1398C85-2AAC-4327-861D-B7B4D6C0860A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
