@@ -23,15 +23,16 @@ namespace Microservice.Whatevers.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddApiVersioning();
             
             services.AddDbContext(Configuration);            
             services.AddRepository();
 
             services.AddAutoMapper();
             services.AddServices();
-
-            services.AddMvcCore()
+            services.AddMvcCore(options => options.SuppressAsyncSuffixInActionNames = false)
                 .AddFluentValidation();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
