@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using Microservice.Whatevers.Repositories.IoC;
 using Microservice.Whatevers.Repositories.Contexts;
 using Microsoft.EntityFrameworkCore;
+using Microservice.Whatevers.Services.IoC;
 
 namespace Microservice.Whatevers.WebApi
 {
@@ -23,9 +24,14 @@ namespace Microservice.Whatevers.WebApi
         {
             services.AddControllers();
             
-            services.AddDbContext(Configuration);
-            
+            services.AddDbContext(Configuration);            
             services.AddRepository();
+
+            services.AddAutoMapper();
+            services.AddServices();
+
+            services.AddMvcCore()
+                .AddFluentValidation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
