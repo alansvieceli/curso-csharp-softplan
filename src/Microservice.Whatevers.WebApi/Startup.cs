@@ -4,6 +4,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microservice.Whatevers.Repositories.IoC;
+using Microservice.Whatevers.Repositories.Contexts;
+using Microsoft.EntityFrameworkCore;
 
 namespace Microservice.Whatevers.WebApi
 {
@@ -27,7 +29,7 @@ namespace Microservice.Whatevers.WebApi
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, WhateverContext whateverContext)
         {
             if (env.IsDevelopment())
             {
@@ -41,6 +43,8 @@ namespace Microservice.Whatevers.WebApi
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => endpoints.MapControllers() );
+
+            whateverContext.Database.Migrate();
         }
     }
 }
